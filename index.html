@@ -1,166 +1,171 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تقرير الأسهم السعودية لشهر سبتمبر | تداول بلس</title>
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- 谷歌阿拉伯语 Cairo 字体 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #0B0E14;
-    }
-    .gold-gradient-bg {
-      background: linear-gradient(135deg, #F5D061 0%, #D4AF37 50%, #AA771C 100%);
-    }
-    .gold-text {
-      background: linear-gradient(135deg, #FFE57F 0%, #F5D061 50%, #C69214 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .card-border {
-      border: 1px solid rgba(212, 175, 55, 0.2);
-    }
-    .pulse-glow {
-      box-shadow: 0 0 25px rgba(245, 208, 97, 0.35);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>النادي الملكي للاستثمار - السوق السعودي TASI</title>
+    <!-- 使用 Tailwind CSS 样式库 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: #000000; 
+            color: #f9fafb; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* 移动端外壳容器：在电脑上显示为标准手机框，在手机上自动撑满全屏 */
+        .mobile-container {
+            width: 100%;
+            max-width: 430px;
+            min-height: 100vh;
+            background-color: #030712;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .gold-gradient { background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 40%, #d97706 100%); }
+        .gold-text { background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .royal-card { background: linear-gradient(145deg, rgba(17, 24, 39, 0.95) 0%, rgba(31, 41, 55, 0.8) 100%); border: 1px solid rgba(245, 158, 11, 0.35); }
+        .pulse-glow { box-shadow: 0 0 30px rgba(245, 158, 11, 0.4); animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 0 35px rgba(245, 158, 11, 0.7); }
+            100% { transform: scale(1.02); box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
+        }
+        .ticker-wrap { width: 100%; overflow: hidden; background: #0b0f19; border-top: 1px solid rgba(245,158,11,0.3); border-bottom: 1px solid rgba(245,158,11,0.3); padding: 8px 0; white-space: nowrap; }
+        .ticker-move { display: inline-block; animation: ticker 25s linear infinite; }
+        .ticker-item { display: inline-block; padding: 0 2rem; font-size: 0.85rem; font-weight: bold; }
+        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(100%, 0, 0); } }
+    </style>
 </head>
-<body class="text-slate-100 min-h-screen pb-24 selection:bg-amber-500 selection:text-black">
+<body>
 
-  <!-- 1. 顶部倒计时通知条 -->
-  <div class="bg-amber-500/10 border-b border-amber-500/20 py-2.5 px-4 text-center text-xs sm:text-sm text-amber-300 font-semibold flex items-center justify-center gap-2">
-    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-    <span>تحديث خاص لشهر سبتمبر: التقرير الاستثماري لمؤشر تاسي متاح مجانًا لفترة محدودة</span>
-  </div>
+    <div class="mobile-container">
+        
+        <!-- 顶部导航 -->
+        <header class="w-full py-3 px-4 border-b border-amber-500/20 backdrop-blur-md bg-black/90 flex justify-between items-center sticky top-0 z-50">
+            <div class="flex items-center gap-1.5">
+                <span class="text-amber-400 text-lg">👑</span>
+                <span class="gold-text font-black text-xs tracking-wider">SAUDI ROYAL TRADERS</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span class="text-[10px] text-emerald-400 font-bold">غرفة نشطة</span>
+            </div>
+        </header>
 
-  <!-- 导航 / 品牌名 -->
-  <header class="max-w-3xl mx-auto px-4 py-5 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <div class="w-8 h-8 rounded-lg gold-gradient-bg flex items-center justify-center font-black text-slate-950 text-base shadow">
-        T
-      </div>
-      <span class="font-extrabold text-base tracking-wider text-slate-200">تداول بلس | Tadawul Plus</span>
+        <!-- 实时行情跑马灯 -->
+        <div class="ticker-wrap text-amber-300">
+            <div class="ticker-move">
+                <span class="ticker-item">📈 مؤشر تاسي (TASI): +1.65%</span>
+                <span class="ticker-item">🟢 سهم أرامكو (2222): 30.10 (+2.4%)</span>
+                <span class="ticker-item">🟢 مصرف الراجحي (1120): 90.50 (+3.5%)</span>
+                <span class="ticker-item">🟢 أكوا باور (2082): 352.00 (+5.1%)</span>
+                <span class="ticker-item">⚡ إشارة دخول VIP جديدة أُرسلت بنجاح</span>
+            </div>
+        </div>
+
+        <!-- 主体内容 -->
+        <main class="w-full px-4 py-6 flex-grow flex flex-col items-center text-center">
+            
+            <!-- 顶级限时标语 -->
+            <div class="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/50 text-amber-300 text-[11px] px-3.5 py-1.5 rounded-full mb-5 shadow-lg">
+                <span>🔥 حصرياً لمستثمري المملكة: انضم مجاناً قبل اكتمال مقاعد اليوم</span>
+            </div>
+
+            <!-- 主标题 -->
+            <h1 class="text-2xl font-black leading-snug mb-4 tracking-tight">
+                ضاعف عوائدك في <span class="gold-text">سوق الأسهم السعودي (تاسي)</span> مع نخبة الخبراء
+            </h1>
+
+            <!-- 副标题 -->
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+                لا تترك أموالك للمغامرة الفردية. انضم الآن إلى <span class="text-white font-bold">غرفة التداول الخاصة</span> واستقبل تحليلات حية وتوصيات أسهم الارتفاع السريع (أرامكو، الراجحي، والقياديات) قبل الجميع.
+            </p>
+
+            <!-- 核心行动按钮 (CTA) —— 请将下方链接替换为你的真实群链接 -->
+            <div class="w-full mb-6">
+                <a href="https://chat.whatsapp.com/你的真实群链接" target="_blank" 
+                   class="w-full block gold-gradient text-slate-950 font-black text-base py-4 px-4 rounded-2xl shadow-xl transition-all transform active:scale-95 text-center pulse-glow">
+                    🚀 انضم إلى مجموعة الـ VIP عبر الواتساب (مجاناً)
+                </a>
+                <div class="flex justify-center items-center gap-2 mt-2.5 text-[11px] text-amber-400 font-semibold bg-amber-500/5 py-1.5 px-3 rounded-lg border border-amber-500/20">
+                    <span>⚡ المقاعد المتاحة اليوم: <strong class="text-white bg-red-600 px-1.5 py-0.5 rounded animate-pulse">فقط 3 مقاعد شاغرة</strong></span>
+                </div>
+            </div>
+
+            <!-- 价值亮点网格 -->
+            <div class="w-full grid grid-cols-1 gap-3 text-right mb-6">
+                <div class="royal-card p-3.5 rounded-xl flex items-start gap-3 shadow-md">
+                    <span class="text-2xl bg-amber-500/10 p-2 rounded-lg border border-amber-500/30">💎</span>
+                    <div>
+                        <h3 class="font-bold text-amber-300 text-xs">توصيات النخبة ذات نسبة النجاح العالية</h3>
+                        <p class="text-slate-400 text-[11px] mt-0.5">تحديد دقيق لأقوى نقاط الدخول والخروج في أسهم السوق السعودي الرئيسية.</p>
+                    </div>
+                </div>
+
+                <div class="royal-card p-3.5 rounded-xl flex items-start gap-3 shadow-md">
+                    <span class="text-2xl bg-amber-500/10 p-2 rounded-lg border border-amber-500/30">📊</span>
+                    <div>
+                        <h3 class="font-bold text-amber-300 text-xs">تقارير صباحية سرية لمؤشر TASI</h3>
+                        <p class="text-slate-400 text-[11px] mt-0.5">استبق السوق ببيانات حصرية وترقيات ترصد تحركات كبار الصناديق.</p>
+                    </div>
+                </div>
+
+                <div class="royal-card p-3.5 rounded-xl flex items-start gap-3 shadow-md">
+                    <span class="text-2xl bg-amber-500/10 p-2 rounded-lg border border-amber-500/30">🛡️</span>
+                    <div>
+                        <h3 class="font-bold text-amber-300 text-xs">إدارة المحافظ وحل مشكلة التعليقات</h3>
+                        <p class="text-slate-400 text-[11px] mt-0.5">استشارات فورية من محللين مخضرمين لمساعدتك في تعويض الخسائر بأمان.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 真实好评卡片 -->
+            <div class="w-full royal-card p-4 rounded-xl text-right mb-5">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-1">
+                        <span class="text-amber-400 text-xs">⭐⭐⭐⭐⭐</span>
+                        <span class="text-[11px] text-white font-bold">تقييم معتمد</span>
+                    </div>
+                    <span class="text-[9px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">موثق</span>
+                </div>
+                <p class="text-[11px] text-slate-300 italic mb-1.5 leading-relaxed">
+                    "أفضل قروب استثماري دخلته في الرياض. توصيات سهم الراجحي وأرامكو حققت لي أرباح ممتازة خلال أسبوع. شكراً لطاقم الخبراء!"
+                </p>
+                <span class="text-[10px] text-amber-400 font-bold">— تركي القحطاني (مستثمر من الرياض)</span>
+            </div>
+
+            <!-- 底部唤醒按钮 -->
+            <div class="w-full mb-5">
+                <a href="https://chat.whatsapp.com/你的真实群链接" target="_blank" 
+                   class="w-full block bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm py-3.5 px-4 rounded-xl shadow-lg transition-all transform active:scale-95 text-center">
+                    💬 اضغط هنا للدخول الفوري إلى قروب الواتساب
+                </a>
+            </div>
+
+            <!-- 社区实时规模 -->
+            <div class="text-[11px] text-slate-400 bg-slate-900/60 p-2.5 rounded-xl border border-slate-800 w-full mb-2">
+                👥 انضم إلينا اليوم أكثر من <span class="text-amber-400 font-bold">850+</span> مستثمر سعودي نشط.
+            </div>
+
+        </main>
+
+        <!-- 底部 -->
+        <footer class="w-full py-4 px-3 border-t border-slate-900 text-center text-slate-500 text-[9px]">
+            <p>تنبيه قانوني: المحتوى لأغراض تعليمية وتحليل السوق فقط، ولا يعتبر نصيحة مالية مباشرة. جميع الحقوق محفوظة © 2026</p>
+        </footer>
+
     </div>
-    <span class="text-xs bg-slate-800 text-amber-400 border border-slate-700 px-2.5 py-1 rounded-full font-medium">
-      رؤية 2030 🇸🇦
-    </span>
-  </header>
-
-  <!-- 2. 主体首屏 (Hero Section) -->
-  <main class="max-w-2xl mx-auto px-4 pt-4 pb-8 text-center">
-
-    <!-- 标签 -->
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-amber-500/30 text-amber-400 text-xs font-bold mb-5">
-      <span class="text-amber-400">★</span>
-      قراءة فنية لحركة السيولة والشركات القيادية
-    </div>
-
-    <!-- 主标题 -->
-    <h1 class="text-3xl sm:text-4xl font-black leading-tight mb-4 tracking-tight">
-      تقرير السوق المالي السعودي: <br>
-      <span class="gold-text">أبرز 5 قطاعات واعدة لشهر سبتمبر</span>
-    </h1>
-
-    <!-- 简短说明 -->
-    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-lg mx-auto">
-      تعرف على تحليلات حركة التدفقات النقدية وتوقعات توزيعات الأرباح للشركات القيادية في قطاعات الطاقة، البنوك، والتعدين.
-    </p>
-
-    <!-- 核心价值卡片 -->
-    <div class="grid grid-cols-1 gap-3.5 text-right mb-8">
-      
-      <div class="bg-slate-900/90 rounded-xl p-4 card-border flex items-start gap-3.5">
-        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
-          📊
-        </div>
-        <div>
-          <h2 class="font-bold text-slate-100 text-sm mb-1">تحليل حركة مؤشر تاسي (TASI)</h2>
-          <p class="text-xs text-slate-400 leading-normal">متابعة دقيقة لمستويات الدعم والمقاومة واتجاهات السيولة المؤسسية الكبرى.</p>
-        </div>
-      </div>
-
-      <div class="bg-slate-900/90 rounded-xl p-4 card-border flex items-start gap-3.5">
-        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
-          💰
-        </div>
-        <div>
-          <h2 class="font-bold text-slate-100 text-sm mb-1">دليل التوزيعات النقدية والأرباح</h2>
-          <p class="text-xs text-slate-400 leading-normal">قائمة مفصلة بالشركات ذات العوائد المستقرة والتدفقات النقدية القوية لعام 2026.</p>
-        </div>
-      </div>
-
-      <div class="bg-slate-900/90 rounded-xl p-4 card-border flex items-start gap-3.5">
-        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
-          ⚡
-        </div>
-        <div>
-          <h2 class="font-bold text-slate-100 text-sm mb-1">مشاريع الطاقة المتجددة ورؤية 2030</h2>
-          <p class="text-xs text-slate-400 leading-normal">تقييم الفرص الاستثمارية المرتبطة بمشاريع التحول الوطني وشركات البنية التحتية.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- 首屏内主 CTA 按钮 -->
-    <div class="mb-10">
-      <!-- 请将下方的 966500000000 替换为您的 WhatsApp 号码 -->
-      <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D9%82%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%20%D9%84%D8%B4%D9%87%D8%B1%20%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1" 
-         target="_blank" 
-         class="w-full block gold-gradient-bg text-slate-950 font-extrabold text-base py-4 px-6 rounded-xl shadow-lg pulse-glow hover:opacity-95 transform active:scale-95 transition-all">
-        <div class="flex items-center justify-center gap-3">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-          </svg>
-          <span>تواصل عبر واتساب للحصول على التقرير</span>
-        </div>
-      </a>
-      <span class="text-[11px] text-slate-500 mt-2 block">خدمة سريعة ومباشرة • محتوى تعليمي وتحليلي مجاني 100%</span>
-    </div>
-
-    <!-- 3. 常见问题解答 (FAQ) -->
-    <div class="text-right border-t border-slate-800/80 pt-6">
-      <h3 class="text-base font-bold text-amber-400 mb-4">الأسئلة الشائعة</h3>
-      
-      <div class="space-y-3">
-        <div class="bg-slate-900/60 rounded-lg p-3.5 border border-slate-800">
-          <p class="font-semibold text-xs text-slate-200 mb-1">كيف يمكنني استلام التقرير؟</p>
-          <p class="text-xs text-slate-400 leading-relaxed">بمجرد الضغط على زر واتساب، سيتم فتح محادثة مباشرة مع فريقنا وإرسال التقرير بصيغة PDF فورًا.</p>
-        </div>
-        <div class="bg-slate-900/60 rounded-lg p-3.5 border border-slate-800">
-          <p class="font-semibold text-xs text-slate-200 mb-1">هل يتطلب التقرير أي رسوم؟</p>
-          <p class="text-xs text-slate-400 leading-relaxed">التقرير مجاني تمامًا لأغراض الاطلاع والتحليل المالي العام دون أي اشتراكات خفية.</p>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- 4. 底部合规与风险提示 (广告过审核心区域) -->
-  <footer class="max-w-2xl mx-auto px-4 py-6 text-center text-xs text-slate-500 border-t border-slate-900 leading-relaxed">
-    <p class="mb-2">
-      <strong>تنويه المخاطر وإخلاء المسؤولية:</strong> الأوراق المالية وأسواق الأسهم تنطوي دائمًا على مخاطر تقلب الأسعار واحتمالية خسارة رأس المال. جميع المواد والتحليلات الواردة في هذا التقرير هي لأغراض إعلامية وتثقيفية فقط، ولا تشكل بأي حال من الأحوال توصية مباشرة أو مشورة ملزمة للشراء أو البيع.
-    </p>
-    <p class="text-slate-600">© 2026 تداول بلس. جميع الحقوق محفوظة.</p>
-  </footer>
-
-  <!-- 5. 底部固定悬浮条 (Sticky WhatsApp Bar for Mobile) -->
-  <div class="fixed bottom-0 left-0 right-0 p-3 bg-slate-950/95 backdrop-blur border-t border-slate-800 z-50 flex items-center justify-center">
-    <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D9%82%D8%B1%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%20%D9%84%D8%B4%D9%87%D8%B1%20%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1" 
-       target="_blank" 
-       class="w-full max-w-md gold-gradient-bg text-slate-950 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-sm shadow-lg active:scale-95 transition-all">
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-      </svg>
-      <span>اضغط هنا وتواصل عبر واتساب</span>
-    </a>
-  </div>
 
 </body>
 </html>
